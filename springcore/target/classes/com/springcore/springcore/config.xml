@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class = "com.springcore.springcore.Student" name = "student1">
+	<!-- <property name = "studentId">
+	<value>2234</value></property>
+	<property name = "studentName">
+	<value>Srijan</value>
+	</property>
+	<property name = "studentAddress">
+	<value>Varanasi</value>
+	</property> -->
+	<property name = "studentId" value = "2234"/>
+	<property name = "studentName" value = "Srijan"/>
+    <property name = "studentAddress" value = "Delhi"/>
+	</bean>
+	<!--  second object  -->
+	<!-- <bean name = "student2" class = "com.springcore.springcore.Student">
+	<property name = "studentId" value = "2234"/>
+	<property name = "studentName" value = "Ujjawal"/>
+    <property name = "studentAddress" value = "Delhi"/>
+	</bean> -->
+	<bean class = "com.springcore.springcore.Student" name = "student2" p:studentId="100" p:studentName = "Ujjawal" p:studentAddress  = "DElhi" />
+	<!-- more bean definitions go here -->
+	
+</beans>

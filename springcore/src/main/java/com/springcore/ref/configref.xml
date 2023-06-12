@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+     <bean class = "com.springcore.ref.B" name = "refb">
+     <property name = "y" value = "90">
+     </property>
+     </bean>
+     <!-- Making A to use the object of B -->
+     <bean class = "com.springcore.ref.A" name = "refa">
+     <property name = "x" value = "400" />
+     <property name = "ob" ref= "refb"/>
+    <!--  <property name = "ob">
+     <ref bean = "refb"></ref>
+     </property> -->
+     
+     </bean>
+	</beans>
